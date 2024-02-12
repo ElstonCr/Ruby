@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('/assets/friends.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            /* Adjust the background size as needed */
+            background-size: cover;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px; /* Set the desired width */
+            height: 200px; /* Set the desired height */
+        }
+        .welcome-text {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white; /* Change the text color as needed */
+            font-size: 2em; /* Change the font size as needed */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-text">
+        </strong>
+        <% if user_signed_in? %>
+            <p>Welcome, <%= current_user.name %>. <br/> We're glad to see you again.</p>
+        <% else %>
+            <p>Welcome <br/> Please sign in to continue.</p>
+        <% end %></strong>
+    </div>
+</body>
+</html>
